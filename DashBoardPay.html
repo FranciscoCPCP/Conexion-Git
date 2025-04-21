@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard de Pagos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fb;
+    }
+
+    .payment-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    }
+
+    .payment-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .payment-header h2 {
+      color: #333;
+    }
+
+    .btn-new-payment {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .btn-new-payment:hover {
+      background-color: #45a049;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #f0f0f0;
+      color: #555;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .status {
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      display: inline-block;
+    }
+
+    .status.paid {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .status.pending {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    .status.failed {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="payment-section">
+    <div class="payment-header">
+      <h2>Resumen de Pagos</h2>
+      <button class="btn-new-payment">+ Nuevo Pago</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID Transacción</th>
+          <th>Cliente</th>
+          <th>Monto</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#PAG-0001</td>
+          <td>Juan Pérez</td>
+          <td>$180.00</td>
+          <td>21/04/2025</td>
+          <td><span class="status paid">Pagado</span></td>
+        </tr>
+        <tr>
+          <td>#PAG-0002</td>
+          <td>Lucía Gómez</td>
+          <td>$320.00</td>
+          <td>20/04/2025</td>
+          <td><span class="status pending">Pendiente</span></td>
+        </tr>
+        <tr>
+          <td>#PAG-0003</td>
+          <td>Carlos Díaz</td>
+          <td>$99.00</td>
+          <td>19/04/2025</td>
+          <td><span class="status failed">Fallido</span></td>
+        </tr>
+        <tr>
+          <td>#PAG-0004</td>
+          <td>Ana Torres</td>
+          <td>$150.00</td>
+          <td>18/04/2025</td>
+          <td><span class="status paid">Pagado</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
